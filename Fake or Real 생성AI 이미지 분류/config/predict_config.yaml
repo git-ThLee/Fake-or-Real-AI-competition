@@ -1,0 +1,11 @@
+DIRECTORY:
+  dataset: #{DATA_DIR}/test/images
+  sample_submission_path : #{DATA_DIR}/test/sample_submission.csv
+
+TRAIN:
+  train_serial: #'YYYYMMDD_HHMMSS'
+  batch_size: 32
+
+PREDICT:
+  seed: 42
+  gpu: 0

@@ -36,7 +36,6 @@ class EarlyStopper():
                 self.logger.info(msg)
                 self.logger.info(f"Set counter as {self.patience_counter}")
                 self.logger.info(f"Update best score as {abs(loss)}")
-                
         
         else:
             print('debug')
