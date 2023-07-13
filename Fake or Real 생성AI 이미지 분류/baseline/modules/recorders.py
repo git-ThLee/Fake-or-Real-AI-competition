@@ -72,6 +72,7 @@ class Recorder():
         self.logger.info(msg) if self.logger else None
         
     def save_plot(self, plots: list):
+
         record_df = pd.read_csv(self.record_filepath)
         current_epoch = record_df['epoch_index'].max()
         epoch_range = list(range(0, current_epoch+1))

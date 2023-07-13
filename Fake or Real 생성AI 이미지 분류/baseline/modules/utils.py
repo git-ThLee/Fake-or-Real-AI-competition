@@ -37,14 +37,9 @@ def save_yaml(path, obj):
     with open(path, 'w') as f:
         yaml.dump(obj, f, sort_keys=False)
 
-# def load_yaml(path):
-#     with open(path, 'r') as f:
-#         return yaml.load(f, Loader=yaml.FullLoader)
 def load_yaml(path):
     with open(path, 'r') as f:
-        lines = [line for line in f if "!!python/object/new:easydict.EasyDict" not in line]
-        yaml_content = "\n".join(lines)
-        return yaml.load(yaml_content, Loader=yaml.FullLoader)
+        return yaml.load(f, Loader=yaml.FullLoader)
 
 '''
 Logger
